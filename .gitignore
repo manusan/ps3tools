@@ -1,9 +1,14 @@
 *~
 *.o
-pupunpack
 readself
+pupunpack
 unself
 sceverify
-unpkg
 makeself
-makepkg
+norunpack
+puppack
+unpkg
+pkg
+cosunpkg
+cospkg
+ungpkg
