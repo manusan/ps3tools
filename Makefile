@@ -8,9 +8,14 @@ CC	=	gcc
 CFLAGS	=	-g -O2 -Wall -W
 LDFLAGS =	-lz
 
-OBJS	= $(COMMON) $(addsuffix .o, $(TOOLS))
+OBJS	=	$(COMMON) $(addsuffix .o, $(TOOLS))
+
+prefix	=	$(HOME)
 
 all: $(TOOLS)
+
+install: all
+	install $(TOOLS) $(prefix)/bin/
 
 $(TOOLS): %: %.o $(COMMON) $(DEPS)
 	$(CC) $(CFLAGS) -o $@ $< $(COMMON) $(LDFLAGS)
